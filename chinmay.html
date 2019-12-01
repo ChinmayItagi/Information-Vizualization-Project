@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Be Safe LA</title>
+    <!-- d3 -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="/css/bootstrap/jumbotron.css" rel="stylesheet"> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="/css/barchart.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/d3_map.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+
+<body style="background-color:darkgray;">
+    <div class="container">
+        <div id="time" class="container light"></div>
+
+
+        <div class="tab-pane fade show active" id="barchart">
+            <svg width="800" height="400"></svg>
+            
+        </div>
+    <div class="row">
+        <div class="col-md-3"> 
+            <div class="tab-pane fade show active" id="piechart" ></div>
+        </div>
+        <div class="col-md-9" > 
+            <div class="tab-pane fade show active" id="legend" ></div>
+        </div>
+            <script src="/bar_chart.js"></script>
+    </div>
+    </div>
+    <div id="area" class="jumbotron">
+        <div class="container">
+          <h2>Crime Occurrences in LAPD Division</h2>
+          <p class="lead">Select Particular County form LA county Map</p>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div id="select-year">
+                <span class="lead">Year:</span>
+              </div>
+              <div id="map-right">
+                <h3>
+                    <span id="current-area">All Divisions</span>
+                  </h3>
+                  
+                  <h4>24 Hours Occurrence</h4>
+                  <p>Data is grouped by the hour when the incidents happen.
+                    <br>Bars suggest the total count of cases in the selected area and year.</p>
+                  <div class="row" id="map-24bar"></div>
+                  <h4>Demographic</h4>
+                  <div class="row" id="donuts"></div>
+                  <div class="row" id="bars"></div>
+
+
+
+
+
+
+              </div>
+            </div>
+            <div id="map-left" class="col-md-6">
+              
+            </div>
+          </div>
+        </div>
+        <script src="map.js"></script>
+      </div>
+</body>
